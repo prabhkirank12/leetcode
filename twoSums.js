@@ -21,14 +21,15 @@ var twoSum = function(nums, target) {
 //     }
 //     return [];
 // }
-
     // first creating a new map called comp which will store complements
     const comp = new Map();
     const len = nums.length;
     // iterate over all the elements, if the complement already exist in the map then it will return the pair
     // otherwise it will add it
     for (let i = 0; i < len; i++){
+        // checking if it exists in the map
         if (comp[nums[i]] >= 0) return [comp[nums[i]], i];
+        // addinng to the map
         comp[target-nums[i]] = i
     }
 }
