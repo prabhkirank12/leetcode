@@ -9,7 +9,19 @@ var twoSum = function(nums, target) {
 };
 
 // A better solution with complexity of O(n)
-function twoSum(nums, target){
+// function twoSum(nums, target){
+//     const nums = {}
+//     for ( const num of nums){
+//         const match = target - num;
+//         if(match in nums){
+//             return [match, num]
+//         } else{
+//             nnums[num] = true;
+//         }
+//     }
+//     return [];
+// }
+
     // first creating a new map called comp which will store complements
     const comp = new Map();
     const len = nums.length;
@@ -20,3 +32,4 @@ function twoSum(nums, target){
         comp[target-nums[i]] = i
     }
 }
+
